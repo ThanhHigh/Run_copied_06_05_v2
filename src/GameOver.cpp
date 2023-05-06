@@ -18,8 +18,35 @@ void GameOver::update()
     {
         m_GameOver = false;
         m_PlayAgain = true;
-
     }
+
+    if (KeyboardInput::getInstance()->mouseover(PlayAgiain))
+    {
+        colorPlayAgain = MOUSEOVER_COLOUR;
+        if (KeyboardInput::getInstance()->mouseclick())
+        {
+            m_GameOver = false;
+            m_PlayAgain = true;
+        }
+    }
+    else
+    {
+        colorPlayAgain = UNMOUSE_COLOUR;
+    }
+
+    if (KeyboardInput::getInstance()->mouseover(QuitGame))
+    {
+        colorQuitGame = MOUSEOVER_COLOUR;
+        if (KeyboardInput::getInstance()->mouseclick())
+        {
+            Engine::GetInstance()->quitGame();
+        }
+    }
+    else
+    {
+        colorQuitGame = UNMOUSE_COLOUR;
+    }
+
 }
 
 void GameOver::updateDeath()
