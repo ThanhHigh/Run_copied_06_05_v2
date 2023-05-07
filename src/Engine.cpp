@@ -66,12 +66,12 @@ bool Engine::initGame()
             return false;
         }
         //Open the font
-        m_MenuStartGameFont = TTF_OpenFont( "res/HK_font.ttf", 40 );
+        m_MenuStartGameFont = TTF_OpenFont( "res/Elden_Ring.ttf", 50);
         if(m_MenuStartGameFont == nullptr)
         {
             std::cout << "Failed to load lazy font! SDL_ttf Error" << TTF_GetError() << std::endl;
         }
-        m_GameOverFont = TTF_OpenFont("res/HK_font.ttf", 60);
+        m_GameOverFont = TTF_OpenFont("res/HK_font.ttf", 40);
         if (m_GameOverFont == nullptr)
         {
             std::cout << "Failed to load lazy font! SDL_ttf Error" << TTF_GetError() << std::endl;

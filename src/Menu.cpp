@@ -18,13 +18,13 @@ void Menu::render()
     if (isMenu) TextureManager::getInstance()->drawBG("Menu", 0, 0, 1344, 768);
 
 
-    TextureManager::getInstance()->drawText("MenuStartGame", "Start Game", 560, 350, colorMenuStart, Engine::GetInstance()->getMenuFont());
+    TextureManager::getInstance()->drawText("MenuStartGame", "Start gamE", 560, 350, colorMenuStart, Engine::GetInstance()->getMenuFont());
     int w, h;
     w = TextureManager::getInstance()->m_getTextureWidth["MenuStartGame"];
     h = TextureManager::getInstance()->m_getTextureHeight["MenuStartGame"];
     StartGame = {560, 350, w, h};
 
-    TextureManager::getInstance()->drawText("MenuQuitGame", "Quit Game", 570, 420, colorMenuQuit, Engine::GetInstance()->getMenuFont());
+    TextureManager::getInstance()->drawText("MenuQuitGame", "Quit gamE", 570, 420, colorMenuQuit, Engine::GetInstance()->getMenuFont());
     w = TextureManager::getInstance()->m_getTextureWidth["MenuQuitGame"];
     h = TextureManager::getInstance()->m_getTextureHeight["MenuQuitGame"];
     QuitGame = {570, 450, w, h};
