@@ -50,7 +50,10 @@ public:
         return s_Instance = (s_Instance != nullptr) ? s_Instance : new Engine();
     }
 
-    TTF_Font* m_MenuStartGameFont;
+    inline TTF_Font* getMenuFont(){ return m_MenuStartGameFont; }
+    inline TTF_Font* getGameOverFont(){ return m_GameOverFont; }
+    inline void setMenuFont(TTF_Font* tempFont){ m_MenuStartGameFont = tempFont; }
+    inline void setGameOverFont(TTF_Font* tempFont){ m_GameOverFont = tempFont; }
 private:
     Engine(){}
 
@@ -72,6 +75,9 @@ private:
     // An aray to store levelmap list
     std::vector <GameMap*> m_MapList;
     std::vector <LevelPart> m_LevelPartMapList;
+
+    TTF_Font* m_MenuStartGameFont = nullptr;
+    TTF_Font* m_GameOverFont = nullptr;
 };
 
 #endif //ENGINE_HPP

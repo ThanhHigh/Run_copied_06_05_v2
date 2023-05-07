@@ -58,13 +58,13 @@ void GameOver::render()
 {
     if (m_GameOver) TextureManager::getInstance()->drawBG("GameOver", 0, 0, 1344, 768);
 
-    TextureManager::getInstance()->drawText("GameOverPlayAgain", "Play Again", 570, 330, colorPlayAgain, Engine::GetInstance()->m_MenuStartGameFont );
+    TextureManager::getInstance()->drawText("GameOverPlayAgain", "Play Again", 570, 330, colorPlayAgain, Engine::GetInstance()->getMenuFont() );
     int w, h;
     w = TextureManager::getInstance()->m_getTextureWidth["GameOverPlayAgain"];
     h = TextureManager::getInstance()->m_getTextureHeight["GameOverPlayAgain"];
     PlayAgiain = {570, 330, w, h};
 
-    TextureManager::getInstance()->drawText("GameOverQuitGame", "Quit Game", 570, 450, colorQuitGame, Engine::GetInstance()->m_MenuStartGameFont );
+    TextureManager::getInstance()->drawText("GameOverQuitGame", "Quit Game", 570, 450, colorQuitGame, Engine::GetInstance()->getMenuFont() );
     w = TextureManager::getInstance()->m_getTextureWidth["GameOverQuitGame"];
     h = TextureManager::getInstance()->m_getTextureHeight["GameOverQuitGame"];
     QuitGame = {570, 450, w, h};
